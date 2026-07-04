@@ -1,0 +1,46 @@
+id,tipo,cliente_proveedor,moneda,monto,fecha_emision,fecha_vencimiento,estado
+1,CxC,Constructora Horizonte,USD,15000.00,2026-01-15,2026-03-15,pendiente
+2,CxP,Maquinarias CAT EMEA,EUR,8500.00,2026-02-01,2026-04-01,pendiente
+3,CxC,Minera Andina,USD,22500.00,2026-01-20,2026-02-20,pendiente
+4,CxP,Volvo Construction SE,EUR,12000.00,2026-03-01,2026-05-01,pendiente
+5,CxC,Inmobiliaria del Sur,MXN,450000.00,2026-02-10,2026-04-10,pendiente
+6,CxP,Hitachi Construction JP,CNY,65000.00,2026-01-05,2026-03-05,pendiente
+7,CxC,Empresa Eléctrica del Norte,USD,32000.00,2026-03-15,2026-05-15,pendiente
+8,CxP,Komatsu Latinoamérica,USD,28000.00,2026-02-20,2026-04-20,pendiente
+9,CxC,Gobierno Regional Cusco,USD,55000.00,2026-01-10,2026-03-10,pendiente
+10,CxP,Cummins Power Systems,USD,9500.00,2026-03-05,2026-05-05,pendiente
+11,CxC,PetroPerú,USD,42000.00,2026-02-15,2026-04-15,pendiente
+12,CxP,Liebherr International,EUR,18000.00,2026-01-25,2026-03-25,pendiente
+13,CxC,Constructora del Pacífico,MXN,320000.00,2026-03-01,2026-05-01,pendiente
+14,CxP,Sany Heavy Industry,CNY,85000.00,2026-02-05,2026-04-05,pendiente
+15,CxC,Ministerio de Transportes,USD,78000.00,2026-01-01,2026-03-01,pendiente
+16,CxP,Atlas Copco AB,EUR,14500.00,2026-03-10,2026-05-10,pendiente
+17,CxC,Telefónica del Perú,USD,18000.00,2026-02-28,2026-04-28,pendiente
+18,CxP,John Deere Financial,USD,22000.00,2026-01-18,2026-03-18,pendiente
+19,CxC,Municipalidad de Miraflores,USD,12500.00,2026-03-20,2026-05-20,pendiente
+20,CxP,Bomag GmbH & Co,CNY,38000.00,2026-02-12,2026-04-12,pendiente
+21,CxC,Aeropuertos del Perú,USD,63000.00,2026-01-30,2026-03-30,pendiente
+22,CxP,Wirtgen Group,EUR,22000.00,2026-03-25,2026-05-25,pendiente
+23,CxC,Constructora Graña y Montero,USD,35000.00,2026-02-08,2026-04-08,pendiente
+24,CxP,Manitowoc Cranes,USD,16500.00,2026-01-22,2026-03-22,pendiente
+25,CxC,Universidad Nacional de Ingeniería,USD,9500.00,2026-03-30,2026-05-30,pendiente
+26,CxP,Terex Corporation,CNY,52000.00,2026-02-18,2026-04-18,pendiente
+27,CxC,Proyecto Gas de Camisea,USD,112000.00,2026-01-12,2026-03-12,pendiente
+28,CxP,Putzmeister Concrete,EUR,13500.00,2026-03-08,2026-05-08,pendiente
+29,CxC,Edificaciones Inmobiliarias,USD,28000.00,2026-02-22,2026-04-22,pendiente
+30,CxP,Doosan Infracore,USD,19500.00,2026-01-28,2026-03-28,pendiente
+31,CxC,Club de Regatas Lima,USD,8500.00,2026-04-01,2026-06-01,pendiente
+32,CxP,Hydrema Deutschland,EUR,11000.00,2026-03-12,2026-05-12,pendiente
+33,CxC,Corporación Rey,USD,4500.00,2026-04-05,2026-06-05,pendiente
+34,CxP,Mecalac France,EUR,16500.00,2026-02-25,2026-04-25,pendiente
+35,CxC,Backus y Johnston,USD,29000.00,2026-01-05,2026-03-05,pendiente
+36,CxP,ABG Volvo Pavers,CNY,44000.00,2026-03-18,2026-05-18,pendiente
+37,CxC,Consorcio Vial del Sur,USD,48000.00,2026-02-14,2026-04-14,pendiente
+38,CxP,Bauer Maschinen GmbH,EUR,19500.00,2026-01-08,2026-03-08,pendiente
+39,CxC,Inversiones Centenario,USD,22000.00,2026-04-10,2026-06-10,pendiente
+40,CxP,Kobelco Construction,JPY,2500000.00,2026-02-28,2026-04-28,pendiente
+41,CxC,Entidad Ficticia,MXN,-5000.00,2026-03-01,2026-05-01,pendiente
+42,CxP,Proveedor Sin Dato,USD,,2026-02-15,2026-04-15,pendiente
+43,CxC,Cliente Fechas Inversas,USD,10000.00,2026-05-01,2026-03-01,pendiente
+44,CxP,Proveedor Moneda XYZ,XYZ,7000.00,2026-03-10,2026-05-10,pendiente
+45,CxC,Comprador Tipo Raro,INVALIDO,8000.00,2026-04-01,2026-06-01,pendiente
