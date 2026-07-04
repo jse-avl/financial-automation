@@ -7,7 +7,7 @@
 
 Pipeline en Python para conciliación de cuentas por cobrar (CxC) y cuentas por pagar (CxP) con conversión automática a USD usando tasas de cambio actualizadas vía API.
 
-**Problema que resuelve:** Empresas del sector construcción y maquinaria pesada manejan compras e importaciones en múltiples monedas (USD, EUR, MXN, CNY, etc.). Este proyecto automatiza:
+**Problema que resuelve:** Empresas que manejan compras e importaciones en múltiples monedas (USD, EUR, MXN, CNY, etc.). Este proyecto automatiza:
 
 - Lectura de facturas desde un archivo CSV
 - Consulta de tasas de cambio actualizadas (API Frankfurter, sin API key)
@@ -57,7 +57,7 @@ streamlit run dashboard/app.py   # Dashboard opcional
 
 Python pipeline for accounts receivable (AR) and accounts payable (AP) reconciliation with automatic USD conversion using up-to-date exchange rates via API.
 
-**Problem it solves:** Construction and heavy machinery companies handle purchases and imports in multiple currencies (USD, EUR, MXN, CNY, etc.). This project automates:
+**Problem it solves:** Companies that handle purchases and imports in multiple currencies (USD, EUR, MXN, CNY, etc.). This project automates:
 
 - Reading invoices from a CSV file
 - Fetching live exchange rates (Frankfurter API, no API key required)
