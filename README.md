@@ -1,10 +1,13 @@
 # Automatización de Conciliación y Reporte Financiero
+# Financial Reconciliation and Reporting Automation
+
+---
+
+## Español
 
 Pipeline en Python para conciliación de cuentas por cobrar (CxC) y cuentas por pagar (CxP) con conversión automática a USD usando tasas de cambio actualizadas vía API.
 
-## Problema que resuelve
-
-Empresas del sector construcción y maquinaria pesada manejan compras e importaciones en múltiples monedas (USD, EUR, MXN, CNY, etc.). Este proyecto automatiza:
+**Problema que resuelve:** Empresas del sector construcción y maquinaria pesada manejan compras e importaciones en múltiples monedas (USD, EUR, MXN, CNY, etc.). Este proyecto automatiza:
 
 - Lectura de facturas desde un archivo CSV
 - Consulta de tasas de cambio actualizadas (API Frankfurter, sin API key)
@@ -15,69 +18,85 @@ Empresas del sector construcción y maquinaria pesada manejan compras e importac
 - Generación de reporte Excel profesional con formato condicional
 - Dashboard interactivo en Streamlit
 
-## Stack tecnológico
+### Stack tecnológico
 
 - Python 3.11+
-- pandas (manipulación de datos)
-- requests (consumo de API)
-- openpyxl (generación de Excel)
-- streamlit (dashboard interactivo)
+- pandas, requests, openpyxl, streamlit
 
-## Estructura del proyecto
+### Estructura del proyecto
 
 ```
 financial-automation/
-├── data/
-│   └── cuentas_sample.csv        # Dataset simulado (45 facturas)
-├── src/
-│   ├── fetch_rates.py            # Consulta API Frankfurter con cache
-│   ├── validate.py               # Validación de datos
-│   ├── transform.py              # Conversión a USD y métricas
-│   ├── report.py                 # Generación de Excel con formato
-│   └── main.py                   # Orquestador del pipeline
-├── dashboard/
-│   └── app.py                    # Dashboard Streamlit
-├── output/
-│   └── reporte_financiero.xlsx   # Reporte generado
+├── data/cuentas_sample.csv         # Dataset simulado (45 facturas)
+├── src/fetch_rates.py              # Consulta API Frankfurter con cache
+├── src/validate.py                 # Validación de datos
+├── src/transform.py                # Conversión a USD y métricas
+├── src/report.py                   # Generación de Excel con formato
+├── src/main.py                     # Orquestador del pipeline
+├── dashboard/app.py                # Dashboard Streamlit
+├── output/reporte_financiero.xlsx  # Reporte generado
 ├── requirements.txt
 └── README.md
 ```
 
-## Cómo ejecutar
-
-### 1. Instalar dependencias
+### Cómo ejecutar
 
 ```bash
 pip install -r requirements.txt
-```
-
-### 2. Ejecutar el pipeline
-
-```bash
 python src/main.py
+streamlit run dashboard/app.py   # Dashboard opcional
 ```
 
-Esto genera el archivo `output/reporte_financiero.xlsx` con tres hojas:
-- **Resumen Ejecutivo**: métricas principales, top 5 vencidas, tasas usadas
-- **Detalle**: todas las facturas validadas con monto USD y clasificación aging
-- **Inconsistencias**: filas descartadas con el motivo del error
+### Dataset de prueba
 
-### 3. Dashboard interactivo (opcional)
+45 facturas simuladas con monedas USD, EUR, MXN, CNY. Incluye errores inyectados intencionalmente para probar la validación.
+
+---
+
+## English
+
+Python pipeline for accounts receivable (AR) and accounts payable (AP) reconciliation with automatic USD conversion using up-to-date exchange rates via API.
+
+**Problem it solves:** Construction and heavy machinery companies handle purchases and imports in multiple currencies (USD, EUR, MXN, CNY, etc.). This project automates:
+
+- Reading invoices from a CSV file
+- Fetching live exchange rates (Frankfurter API, no API key required)
+- Data validation (negative amounts, invalid dates, unsupported currencies)
+- Converting all amounts to USD
+- Calculating key metrics: total AR, total AP, net cash flow
+- Aging classification for overdue invoices
+- Generating professional Excel reports with conditional formatting
+- Interactive Streamlit dashboard
+
+### Tech Stack
+
+- Python 3.11+
+- pandas, requests, openpyxl, streamlit
+
+### Project Structure
+
+```
+financial-automation/
+├── data/cuentas_sample.csv         # Simulated dataset (45 invoices)
+├── src/fetch_rates.py              # Frankfurter API client with cache
+├── src/validate.py                 # Data validation rules
+├── src/transform.py                # USD conversion & metrics
+├── src/report.py                   # Excel report generation
+├── src/main.py                     # Pipeline orchestrator
+├── dashboard/app.py                # Streamlit dashboard
+├── output/reporte_financiero.xlsx  # Generated report
+├── requirements.txt
+└── README.md
+```
+
+### How to Run
 
 ```bash
-streamlit run dashboard/app.py
+pip install -r requirements.txt
+python src/main.py
+streamlit run dashboard/app.py   # Optional dashboard
 ```
 
-## Dataset de prueba
+### Test Dataset
 
-El archivo `data/cuentas_sample.csv` contiene 45 facturas simuladas con:
-- Monedas: USD, EUR, MXN, CNY (importaciones realistas de maquinaria)
-- Clientes y proveedores del sector construcción peruano
-- Facturas en múltiples estados de vencimiento
-- Errores inyectados intencionalmente: montos negativos, monedas no soportadas, fechas inversas, campos vacíos
-
-## Notas
-
-- Las tasas de cambio se consultan a la API pública de [Frankfurter](https://api.frankfurter.dev) y se cachean localmente para evitar llamadas repetidas el mismo día
-- El proyecto simula un caso de uso real de automatización financiera con validación previa a distribución gerencial
-- Desarrollado como proyecto de portafolio para el perfil "Analista Programador de Automatización Financiera"
+45 simulated invoices in USD, EUR, MXN, CNY. Includes intentionally injected errors to test validation logic.
