@@ -51,6 +51,13 @@ streamlit run dashboard/app.py   # Dashboard opcional
 
 45 facturas simuladas con monedas USD, EUR, MXN, CNY. Incluye errores inyectados intencionalmente para probar la validación.
 
+### Trabajo relacionado
+
+[`ledgerpilot-ai`](https://github.com/jse-avl/ledgerpilot-ai) lleva estas mismas
+reglas financieras a un back-office de cuentas por pagar con agentes: núcleo
+determinista, IA opcional por capacidad, libro de auditoría encadenado y
+aprobaciones humanas en dos fases.
+
 ---
 
 ## English
@@ -100,3 +107,10 @@ streamlit run dashboard/app.py   # Optional dashboard
 ### Test Dataset
 
 45 simulated invoices in USD, EUR, MXN, CNY. Includes intentionally injected errors to test validation logic.
+
+### Related work
+
+[`ledgerpilot-ai`](https://github.com/jse-avl/ledgerpilot-ai) takes these same
+financial rules into an agentic accounts-payable back office: deterministic core,
+AI optional per capability, hash-chained audit ledger and two-phase human
+approvals.
