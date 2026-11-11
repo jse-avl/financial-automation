@@ -1,3 +1,4 @@
+import argparse
 import os
 import sys
 
@@ -11,12 +12,31 @@ from src.transform import calcular_aging, calcular_metricas, convertir_moneda
 from src.validate import validate_dataframe
 
 
-def main():
-    ruta_csv = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        "data",
-        "cuentas_sample.csv",
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_INPUT = os.path.join(BASE_DIR, "data", "cuentas_sample.csv")
+DEFAULT_OUTPUT = os.path.join(BASE_DIR, "output", "reporte_financiero.xlsx")
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Conciliación CxC/CxP con conversión a USD y reporte Excel."
     )
+    parser.add_argument(
+        "--input",
+        default=DEFAULT_INPUT,
+        help="Ruta del CSV de cuentas (por defecto: data/cuentas_sample.csv)",
+    )
+    parser.add_argument(
+        "--output",
+        default=DEFAULT_OUTPUT,
+        help="Ruta del reporte Excel (por defecto: output/reporte_financiero.xlsx)",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
+    ruta_csv = args.input
 
     if not os.path.exists(ruta_csv):
         print(f"ERROR: No se encuentra el archivo {ruta_csv}")
@@ -44,12 +64,8 @@ def main():
     df_clean = calcular_aging(df_clean)
     metrics = calcular_metricas(df_clean)
 
-    ruta_output = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        "output",
-        "reporte_financiero.xlsx",
-    )
-    os.makedirs(os.path.dirname(ruta_output), exist_ok=True)
+    ruta_output = args.output
+    os.makedirs(os.path.dirname(os.path.abspath(ruta_output)), exist_ok=True)
 
     generar_reporte(df_clean, df_errors, metrics, rates, ruta_output)
 

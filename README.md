@@ -44,6 +44,9 @@ financial-automation/
 ```bash
 pip install -r requirements.txt
 python src/main.py
+
+# Con tu propio CSV / reporte personalizado
+python src/main.py --input mis_cuentas.csv --output reporte.xlsx
 streamlit run dashboard/app.py   # Dashboard opcional
 ```
 
@@ -101,6 +104,9 @@ financial-automation/
 ```bash
 pip install -r requirements.txt
 python src/main.py
+
+# With your own CSV / custom report path
+python src/main.py --input my_accounts.csv --output report.xlsx
 streamlit run dashboard/app.py   # Optional dashboard
 ```
 
